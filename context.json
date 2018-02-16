@@ -1,0 +1,37 @@
+{
+    "company": "Cytellix",
+    "alerts": {
+        "Notifications": [
+            {
+                "Name": "Device Discovered",
+                "MAC Address": "00:10:18:8f:7f:d1",
+                "Id": "269382",
+                "Priority": "WARN",
+                "Time": "02/15/2018 07:40:15 AM",
+                "Notification Type": "DEVICE_DISCOVERED",
+                "Message": "Device 00:10:18:8f:7f:d1 created.",
+                "Zone Name": "Zone1"
+            },
+            {
+                "Name": "Device Discovered",
+                "MAC Address": "00:10:18:99:6e:c9",
+                "Id": "267981",
+                "Priority": "WARN",
+                "Time": "02/14/2018 07:40:15 PM",
+                "Notification Type": "DEVICE_DISCOVERED",
+                "Message": "Device 00:10:18:99:6e:c9 created.",
+                "Zone Name": "Zone1"
+            }
+        ],
+        "TOR Nodes": null,
+        "Nefarious Ports": [
+            {
+                "Port": 3000
+            },
+            {
+                "Port": 8080
+            }
+        ],
+        "Zombie Devices": null
+    }
+}

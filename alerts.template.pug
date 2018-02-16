@@ -1,0 +1,41 @@
+extends layout
+
+mixin type(type, alerts)
+    tr
+        td(class='alert-type')
+            span #{type}
+    each alert in alerts
+        +alert(alert)
+
+mixin alert(alert)
+    tr
+        td(class='content-wrap')
+            table(width='100%' cellpadding='0' cellspacing='0')
+                each value, key in alert
+                    +metadata(key, value)
+
+mixin metadata(key, value)
+    tr
+        td(class='content-block')
+            strong #{key}:&nbsp;
+            span #{value}
+
+block content
+    table(class='body-wrap')
+        tr
+            td
+            td(class='container' width='600')
+                div(class='content')
+                    table(class='main' width='100%' cellpadding='0' cellspacing='0' rules='rows')
+                        tr
+                            td(class='alert alert-bad')
+                                strong #{company}:&nbsp;
+                                - var count = 0;
+                                - for (type in alerts) {
+                                -   if (alerts[type]) count+=alerts[type].length
+                                - }
+                                span #{count} New Alerts
+                            each value, key in alerts
+                                if value
+                                    +type(key, value)
+
